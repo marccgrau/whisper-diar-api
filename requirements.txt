@@ -1,5 +1,4 @@
 uvicorn
-whisper
 transformers
 python-multipart
 pyannote.audio
