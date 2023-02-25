@@ -1,0 +1,11 @@
+uvicorn
+whisper
+transformers
+python-multipart
+pyannote.audio
+numpy
+sklearn
+librosa
+soundfile
+torch
+fastapi
