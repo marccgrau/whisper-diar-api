@@ -1,14 +1,19 @@
 FROM python:3.10-slim
 
-WORKDIR /backend
-ADD /backend/ /backend/
+RUN mkdir app
+WORKDIR /app
 
-COPY requirements.txt requirements.txt
+ENV PATH="${PATH}:/root/.local/bin"
+ENV PYTHONPATH=.
+
+COPY requirements.txt .
 RUN apt-get update && apt-get install git -y
 RUN apt-get install build-essential -y
 RUN apt-get install libsndfile1 -y
 RUN pip3 install -r requirements.txt
 
-EXPOSE 8000
+COPY src/ .
 
-CMD ["python3", "main.py"]
+#EXPOSE 8000
+
+#CMD ["python3", "main.py"]
