@@ -72,16 +72,6 @@ async def change_speakers(speaker_request: SpeakerRequest):
 
 @app.post("/transcribe_embed")
 async def transcribe(file: UploadFile = File(...)):
-    """
-    try: 
-        contents = file.file.read()
-        with open("audio.wav", "wb") as f:
-            f.write(contents)
-    except Exception:
-        return {"message": "Error while uploading audio file"}
-    finally:
-        file.file.close()
-    """
     return model.transcribe(file)
 
 if __name__ == "__main__":

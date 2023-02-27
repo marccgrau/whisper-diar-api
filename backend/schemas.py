@@ -1,6 +1,6 @@
-from pydantic import BaseModel, validator
+from pydantic import BaseModel
 from fastapi import File, UploadFile
-from typing import Dict, List, Literal
+from typing import Literal
 
 class ModelRequest(BaseModel):
     model_size: Literal[

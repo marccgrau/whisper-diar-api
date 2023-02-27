@@ -4,7 +4,6 @@ from utils import utils
 import numpy as np
 from sklearn.cluster import AgglomerativeClustering
 import librosa
-import io
 import tempfile
 
 class ASRDiarModel:
